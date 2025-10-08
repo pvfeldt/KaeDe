@@ -1,0 +1,20 @@
+{
+  "train_data": {
+    "script_url": "train_data",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  },
+  "test_data": {
+    "script_url": "test_data",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "history": "history"
+    }
+  }
+}

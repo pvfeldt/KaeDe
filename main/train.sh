@@ -1,0 +1,39 @@
+#CUDA_VISIBLE_DEVICES=0 nohup python -u train_bash.py \
+#--stage sft \
+#--model_name_or_path ../llm_model/llama-2-7b-chat-hf \
+#--do_train  \
+#--dataset_dir input/WebQSP \
+#--dataset train_data \
+#--template llama2 \
+#--finetuning_type lora \
+#--lora_target all \
+#--output_dir ../checkpoint/WebQSP/llama2-7b  \
+#--overwrite_cache \
+#--per_device_train_batch_size 4 \
+#--gradient_accumulation_steps 4  \
+#--lr_scheduler_type cosine \
+#--logging_steps 10 \
+#--save_steps 1000 \
+#--learning_rate 5e-5  \
+#--num_train_epochs 50 \
+#--plot_loss  >>train.log
+
+CUDA_VISIBLE_DEVICES=0 nohup python -u train_bash.py \
+--stage sft \
+--model_name_or_path ../llm_model/llama-2-7b-chat-hf \
+--do_train  \
+--dataset_dir input/WebQSP \
+--dataset train_data \
+--template llama2 \
+--finetuning_type lora \
+--lora_target all \
+--output_dir ../checkpoint/WebQSP/llama2-7b  \
+--overwrite_cache \
+--per_device_train_batch_size 4 \
+--gradient_accumulation_steps 4  \
+--lr_scheduler_type cosine \
+--logging_steps 10 \
+--save_steps 1000 \
+--learning_rate 5e-5  \
+--num_train_epochs 50 \
+--plot_loss  >>train.log
