@@ -23,10 +23,6 @@ from utils.json_utils import load_json, load_json_1_line
 model = SimCSE("princeton-nlp/unsup-simcse-roberta-large")
 
 
-# model_path = "/data/brr/LF_split/similarity_check/SimCSE/unsup-simcse-roberta-large"
-# tokenizer,model=load_SimCSE_model(model_path)
-
-
 # os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
 def is_number(t):
