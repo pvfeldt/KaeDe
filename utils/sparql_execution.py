@@ -32,7 +32,7 @@ odbc_conn = None
 def initialize_odbc_connection():
     global odbc_conn
     odbc_conn = pyodbc.connect(
-        f'DRIVER={path}/../lib/virtodbc.so;Host=localhost:{FREEBASE_ODBC_PORT};UID=dba;PWD=dba'
+        f'DRIVER={path}/lib/virtodbc.so;Host=localhost:{FREEBASE_ODBC_PORT};UID=dba;PWD=dba'
     )
     odbc_conn.setdecoding(pyodbc.SQL_CHAR, encoding='utf8')
     odbc_conn.setdecoding(pyodbc.SQL_WCHAR, encoding='utf8')
