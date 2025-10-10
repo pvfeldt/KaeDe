@@ -55,14 +55,14 @@ The LLM backbones include Llama-based and DeepSeek-based models.
 
 ## 1 Dataset Processing
 
-Run process.sh to process the original [WebQSP](https://aka.ms/WebQSP) and [CWQ](https://www.dropbox.com/scl/fo/nqujvpg2gc4y0ozkw3wgr/AOzjVEsdUhv2Fx2pamfJlSw?rlkey=746t7xehfqxf1zr867nxiq8aq&e=1&st=n9e0fa7f) datasets.
+Run `process.sh` to process the original WebQSP and CWQ datasets.
 
 ```
 cd data
 bash process.sh
 ```
 
-For separate steps in process.sh, please follow:
+For separate steps in `process.sh`, please follow:
 
 Initially extract information from the original datasets and convert the LFs (path-level and graph-level LFs). 
 
@@ -93,14 +93,14 @@ python generate_entries.py --dataset_type [dataset] --split [split]
 
 ## 2 LLM Fine-Tuning
 
-Run train.sh to perform fine-tuning.
+Run `train.sh` to perform fine-tuning.
 
 ```
 cd main
 bash train.sh
 ```
 
-An example is demonstrated in the train.sh. To specify other relevant hyperparameters, please vary the contents in the box with the following instructions.
+An example is demonstrated in the `train.sh`. To specify other relevant hyperparameters, please vary the contents in the box with the following instructions.
 
 ```
 CUDA_VISIBLE_DEVICES=0 nohup python -u train_bash.py \
@@ -131,14 +131,14 @@ CUDA_VISIBLE_DEVICES=0 nohup python -u train_bash.py \
 
 ## 3 Logical Form Generation
 
-Run response.sh to perform logical form generation.
+Run `response.sh` to perform logical form generation.
 
 ```
 cd main
 bash response.sh
 ```
 
-An example is demonstrated in the response.sh. To specify other relevant hyperparameters, please vary the contents in the box with the following instructions.
+An example is demonstrated in the `response.sh`. To specify other relevant hyperparameters, please vary the contents in the box with the following instructions.
 
 ```
 CUDA_VISIBLE_DEVICES=0 nohup python -u  generate_response.py \
@@ -155,7 +155,7 @@ CUDA_VISIBLE_DEVICES=0 nohup python -u  generate_response.py \
 
 ## 4 Execution & Unsupervised Retrieval
 
-Run search.sh to perform the logical form execution (as well as  the unsupervised retrieval).
+Run `search.sh` to perform the logical form execution (as well as  the unsupervised retrieval).
 
 ```
 cd main
@@ -176,14 +176,14 @@ CUDA_VISIBLE_DEVICES=1 nohup python search.py \
 
 ## 5 Evaluation
 
-Run evaluate.sh to perform the final evaluation.
+Run `evaluate.sh` to perform the final evaluation.
 
 ```
 cd evaluation
 bash evaluate.sh
 ```
 
-For separate steps in evaluate.sh, please follow:
+For separate steps in `evaluate.sh`, please follow:
 
 Append golden answers.
 
