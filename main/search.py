@@ -419,7 +419,6 @@ def search_in_freebase(data, golden_data, golden, output_path):
                 if combined_answers == [] or check_ids(combined_answers):
                     for j in range(len(logical_forms)):
                         if ", " in logical_forms[j] and " , " not in logical_forms[j]:
-                            # llama 3 8b
                             logical_forms[j] = logical_forms[j].replace(", ", " , ")
                         count = 0
                         try:
